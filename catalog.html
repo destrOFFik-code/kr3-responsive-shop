@@ -15,13 +15,15 @@
   <meta property="og:image:alt" content="ShopProject — учебный интернет-магазин">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body class="page" id="top">
   <a class="skip-link" href="#main-content">К содержимому</a>
   <header class="site-header">
     <div class="site-header__inner">
       <a class="site-header__logo" href="index.html">ShopProject</a>
-      <nav class="site-nav" aria-label="Основная навигация">
+      <button class="button button--secondary site-nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" hidden>Меню</button>
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
           <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
@@ -46,45 +48,49 @@
         Откройте описание или перейдите к заявке на выбранную позицию.</p>
     </section>
     <div class="catalog-layout">
+      <a class="catalog-products-jump" href="#products-title">К товарам и услугам</a>
       <aside class="catalog-filters" aria-labelledby="filters-title">
         <h2 class="catalog-filters__title" id="filters-title">Фильтры</h2>
-        <p id="filters-note" class="catalog-filters__note">
-          Учебный макет фильтров. Фильтрация товаров пока недоступна.
-        </p>
-        <form class="catalog-filters__form" action="catalog.html" method="get" aria-describedby="filters-note">
-          <fieldset class="catalog-filters__group">
-            <legend class="catalog-filters__legend">Категория</legend>
-            <label class="catalog-filters__label">
-              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="lighting">
-              Освещение
-            </label>
-            <label class="catalog-filters__label">
-              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="storage">
-              Хранение
-            </label>
-            <label class="catalog-filters__label">
-              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="accessories">
-              Аксессуары
-            </label>
-            <label class="catalog-filters__label">
-              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="services">
-              Услуги
-            </label>
-          </fieldset>
+        <details class="catalog-filters__details" open>
+          <summary>Параметры фильтра</summary>
+          <p id="filters-note" class="catalog-filters__note">
+            Учебный макет фильтров. Фильтрация товаров пока недоступна.
+          </p>
+          <form class="catalog-filters__form" action="catalog.html" method="get" aria-describedby="filters-note">
+            <fieldset class="catalog-filters__group">
+              <legend class="catalog-filters__legend">Категория</legend>
+              <label class="catalog-filters__label">
+                <input class="catalog-filters__checkbox" type="checkbox" name="category" value="lighting">
+                Освещение
+              </label>
+              <label class="catalog-filters__label">
+                <input class="catalog-filters__checkbox" type="checkbox" name="category" value="storage">
+                Хранение
+              </label>
+              <label class="catalog-filters__label">
+                <input class="catalog-filters__checkbox" type="checkbox" name="category" value="accessories">
+                Аксессуары
+              </label>
+              <label class="catalog-filters__label">
+                <input class="catalog-filters__checkbox" type="checkbox" name="category" value="services">
+                Услуги
+              </label>
+            </fieldset>
 
-          <fieldset class="catalog-filters__group">
-            <legend class="catalog-filters__legend">Цена, руб.</legend>
-            <label class="catalog-filters__label" for="price-from">От</label>
-            <input class="catalog-filters__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
-            <label class="catalog-filters__label catalog-filters__label--range-end" for="price-to">До</label>
-            <input class="catalog-filters__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
-          </fieldset>
+            <fieldset class="catalog-filters__group">
+              <legend class="catalog-filters__legend">Цена, руб.</legend>
+              <label class="catalog-filters__label" for="price-from">От</label>
+              <input class="catalog-filters__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
+              <label class="catalog-filters__label catalog-filters__label--range-end" for="price-to">До</label>
+              <input class="catalog-filters__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+            </fieldset>
 
-          <button class="button button--primary catalog-filters__button" type="submit" disabled>Применить</button>
-        </form>
+            <button class="button button--primary catalog-filters__button" type="submit" disabled>Применить</button>
+          </form>
+        </details>
       </aside>
       <section class="catalog-products" aria-labelledby="products-title">
-        <h2 class="catalog-products__title" id="products-title">Товары и услуги — 6 позиций</h2>
+        <h2 class="catalog-products__title" id="products-title" tabindex="-1">Товары и услуги — 6 позиций</h2>
         <div class="products-grid">
         <article class="product-card product-card--featured">
           <span class="product-card__badge">Хит</span>
