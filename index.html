@@ -10,12 +10,11 @@
   <meta property="og:site_name" content="ShopProject">
   <meta property="og:title" content="Товары для рабочего места — ShopProject">
   <meta property="og:description" content="ShopProject: товары и услуги для рабочего места. Каталог, характеристики, отзывы и учебная форма заявки.">
-  <meta property="og:url" content="https://destroffik-code.github.io/kr1-html-css-shop/">
-  <meta property="og:image" content="https://destroffik-code.github.io/kr1-html-css-shop/images/preview.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="ShopProject — учебный интернет-магазин">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <script src="js/main.js" defer></script>
 </head>
 <body class="page" id="top">
@@ -39,14 +38,16 @@
   </header>
   <main class="page__main" id="main-content" tabindex="-1">
     <section class="hero">
-      <p class="hero__eyebrow">Учебный магазин · КР №1</p>
+      <p class="hero__eyebrow">Учебный магазин</p>
       <h1 class="hero__title">Всё для удобного рабочего места</h1>
       <p class="hero__description">Свет, порядок и удобство для занятий. Посмотрите товары,
         сравните характеристики и оставьте заявку на выбранную вещь.</p>
-      <a class="button button--primary" href="catalog.html">Открыть каталог</a>
-      <a class="hero__link" href="order.html">Перейти к заявке</a>
-      <a class="hero__link" href="#advantages">Преимущества</a>
-      <a class="hero__link" href="#popular">Популярные товары</a>
+      <div class="hero__actions">
+        <a class="button button--primary" href="catalog.html">Открыть каталог</a>
+        <a class="hero__link" href="order.html">Перейти к заявке</a>
+        <a class="hero__link" href="#advantages">Преимущества</a>
+        <a class="hero__link" href="#popular">Популярные товары</a>
+      </div>
     </section>
 
     <section class="section" id="advantages">
@@ -65,7 +66,11 @@
         <article class="product-card product-card--featured">
           <span class="product-card__badge">Хит</span>
           <a class="product-card__image-link" href="product.html#lamp" aria-label="Подробнее: Лампа «Линия»">
-            <img class="product-card__image" src="images/lamp.jpg" alt="Синяя настольная лампа с шарнирной стойкой и круглым тёмным основанием" width="640" height="400" loading="lazy" decoding="async">
+            <picture>
+              <source type="image/webp" srcset="images/lamp-400.webp 400w, images/lamp-800.webp 800w, images/lamp.webp 1280w"
+                sizes="(min-width: 1148px) 317px, (min-width: 1024px) calc(33.33vw - 66px), (min-width: 768px) calc(50vw - 70px), calc(100vw - 66px)">
+              <img class="product-card__image" src="images/lamp.jpg" srcset="images/lamp-400.jpg 400w, images/lamp-800.jpg 800w, images/lamp.jpg 1280w" sizes="(min-width: 1148px) 317px, (min-width: 1024px) calc(33.33vw - 66px), (min-width: 768px) calc(50vw - 70px), calc(100vw - 66px)" alt="Синяя настольная лампа с шарнирной стойкой и круглым тёмным основанием" width="640" height="400" loading="lazy" decoding="async">
+            </picture>
           </a>
           <p class="product-card__category">Освещение</p>
           <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#lamp">Лампа «Линия»</a></h3>
@@ -76,7 +81,7 @@
 
         <article class="product-card">
           <a class="product-card__image-link" href="product.html#organizer" aria-label="Подробнее: Органайзер «Порядок»">
-            <img class="product-card__image" src="images/organizer.jpg" alt="Деревянный органайзер с двумя отделениями для карандашей, ручек и бумаги" width="640" height="400" loading="lazy" decoding="async">
+            <img class="product-card__image" src="images/organizer.jpg" srcset="images/organizer-400.jpg 400w, images/organizer-800.jpg 800w, images/organizer.jpg 1280w" sizes="(min-width: 1148px) 317px, (min-width: 1024px) calc(33.33vw - 66px), (min-width: 768px) calc(50vw - 70px), calc(100vw - 66px)" alt="Деревянный органайзер с двумя отделениями для карандашей, ручек и бумаги" width="640" height="400" loading="lazy" decoding="async">
           </a>
           <p class="product-card__category">Хранение</p>
           <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#organizer">Органайзер «Порядок»</a></h3>
@@ -88,7 +93,7 @@
         <article class="product-card">
 
           <a class="product-card__image-link" href="product.html#stand" aria-label="Подробнее: Подставка «Опора»">
-            <img class="product-card__image" src="images/stand.jpg" alt="Серебристая алюминиевая подставка для ноутбука с нескользящими накладками" width="640" height="400" loading="lazy" decoding="async">
+            <img class="product-card__image" src="images/stand.jpg" srcset="images/stand-400.jpg 400w, images/stand-800.jpg 800w, images/stand.jpg 1280w" sizes="(min-width: 1148px) 317px, (min-width: 1024px) calc(33.33vw - 66px), (min-width: 768px) calc(50vw - 70px), calc(100vw - 66px)" alt="Серебристая алюминиевая подставка для ноутбука с нескользящими накладками" width="640" height="400" loading="lazy" decoding="async">
           </a>
           <p class="product-card__category">Аксессуары</p>
           <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#stand">Подставка «Опора»</a></h3>
@@ -187,9 +192,9 @@
       <p>&copy; 2026 Учебный проект. Все права защищены.</p>
       <p>Дисциплина: Фронтенд и бэкенд разработка</p>
       <p><a href="contacts.html">Контактная информация</a></p>
+      <a class="back-to-top" href="#top">Наверх</a>
     </div>
   </footer>
-  <a class="back-to-top" href="#top" aria-label="Наверх страницы">↑ Наверх</a>
 <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
   <h2 class="order-dialog__title" id="order-dialog-title" tabindex="-1" autofocus>Оформление заявки</h2>
 

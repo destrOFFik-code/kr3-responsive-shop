@@ -10,12 +10,11 @@
   <meta property="og:site_name" content="ShopProject">
   <meta property="og:title" content="Каталог товаров и услуг — ShopProject">
   <meta property="og:description" content="Четыре товара и две услуги для рабочего места: цены, категории и подробные описания.">
-  <meta property="og:url" content="https://destroffik-code.github.io/kr1-html-css-shop/catalog.html">
-  <meta property="og:image" content="https://destroffik-code.github.io/kr1-html-css-shop/images/preview.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="ShopProject — учебный интернет-магазин">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body class="page" id="top">
   <a class="skip-link" href="#main-content">К содержимому</a>
@@ -90,7 +89,7 @@
         <article class="product-card product-card--featured">
           <span class="product-card__badge">Хит</span>
           <a class="product-card__image-link" href="product.html#lamp" aria-label="Подробнее: Лампа «Линия»">
-            <img class="product-card__image" src="images/lamp.jpg" alt="Синяя настольная лампа с шарнирной стойкой и круглым тёмным основанием" width="640" height="400" loading="lazy" decoding="async">
+            <img class="product-card__image" src="images/lamp.jpg" srcset="images/lamp-400.jpg 400w, images/lamp-800.jpg 800w, images/lamp.jpg 1280w" sizes="(min-width: 1200px) 225px, (min-width: 1148px) 367px, (min-width: 1024px) calc(50vw - 207px), (min-width: 768px) calc(50vw - 70px), calc(100vw - 66px)" alt="Синяя настольная лампа с шарнирной стойкой и круглым тёмным основанием" width="640" height="400" loading="lazy" decoding="async">
           </a>
           <p class="product-card__category">Освещение</p>
           <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#lamp">Лампа «Линия»</a></h3>
@@ -101,7 +100,7 @@
 
         <article class="product-card">
           <a class="product-card__image-link" href="product.html#organizer" aria-label="Подробнее: Органайзер «Порядок»">
-            <img class="product-card__image" src="images/organizer.jpg" alt="Деревянный органайзер с двумя отделениями для карандашей, ручек и бумаги" width="640" height="400" loading="lazy" decoding="async">
+            <img class="product-card__image" src="images/organizer.jpg" srcset="images/organizer-400.jpg 400w, images/organizer-800.jpg 800w, images/organizer.jpg 1280w" sizes="(min-width: 1200px) 225px, (min-width: 1148px) 367px, (min-width: 1024px) calc(50vw - 207px), (min-width: 768px) calc(50vw - 70px), calc(100vw - 66px)" alt="Деревянный органайзер с двумя отделениями для карандашей, ручек и бумаги" width="640" height="400" loading="lazy" decoding="async">
           </a>
           <p class="product-card__category">Хранение</p>
           <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#organizer">Органайзер «Порядок»</a></h3>
@@ -113,7 +112,7 @@
         <article class="product-card">
 
           <a class="product-card__image-link" href="product.html#stand" aria-label="Подробнее: Подставка «Опора»">
-            <img class="product-card__image" src="images/stand.jpg" alt="Серебристая алюминиевая подставка для ноутбука с нескользящими накладками" width="640" height="400" loading="lazy" decoding="async">
+            <img class="product-card__image" src="images/stand.jpg" srcset="images/stand-400.jpg 400w, images/stand-800.jpg 800w, images/stand.jpg 1280w" sizes="(min-width: 1200px) 225px, (min-width: 1148px) 367px, (min-width: 1024px) calc(50vw - 207px), (min-width: 768px) calc(50vw - 70px), calc(100vw - 66px)" alt="Серебристая алюминиевая подставка для ноутбука с нескользящими накладками" width="640" height="400" loading="lazy" decoding="async">
           </a>
           <p class="product-card__category">Аксессуары</p>
           <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#stand">Подставка «Опора»</a></h3>
@@ -124,7 +123,7 @@
 
         <article class="product-card">
           <a class="product-card__image-link" href="product.html#mat" aria-label="Подробнее: Коврик «Контур»">
-            <img class="product-card__image" src="images/mat.jpg" alt="Синий войлочный коврик с закруглёнными углами и тёмной нескользящей основой" width="640" height="400" loading="lazy" decoding="async">
+            <img class="product-card__image" src="images/mat.jpg" srcset="images/mat-400.jpg 400w, images/mat-800.jpg 800w, images/mat.jpg 1280w" sizes="(min-width: 1200px) 225px, (min-width: 1148px) 367px, (min-width: 1024px) calc(50vw - 207px), (min-width: 768px) calc(50vw - 70px), calc(100vw - 66px)" alt="Синий войлочный коврик с закруглёнными углами и тёмной нескользящей основой" width="640" height="400" loading="lazy" decoding="async">
           </a>
           <p class="product-card__category">Аксессуары</p>
           <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#mat">Коврик «Контур»</a></h3>
@@ -166,9 +165,9 @@
       <p>&copy; 2026 Учебный проект. Все права защищены.</p>
       <p>Дисциплина: Фронтенд и бэкенд разработка</p>
       <p><a href="contacts.html">Контактная информация</a></p>
+      <a class="back-to-top" href="#top">Наверх</a>
     </div>
   </footer>
-  <a class="back-to-top" href="#top" aria-label="Наверх страницы">↑ Наверх</a>
 
 </body>
 </html>

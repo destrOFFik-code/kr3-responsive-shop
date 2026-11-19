@@ -10,12 +10,11 @@
   <meta property="og:site_name" content="ShopProject">
   <meta property="og:title" content="Товары и характеристики — ShopProject">
   <meta property="og:description" content="Изображения и характеристики лампы «Линия», органайзера «Порядок», подставки «Опора» и коврика «Контур».">
-  <meta property="og:url" content="https://destroffik-code.github.io/kr1-html-css-shop/product.html">
-  <meta property="og:image" content="https://destroffik-code.github.io/kr1-html-css-shop/images/preview.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="ShopProject — учебный интернет-магазин">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body class="page" id="top">
   <a class="skip-link" href="#main-content">К содержимому</a>
@@ -53,26 +52,28 @@
     </section>
     <article class="product-detail" id="lamp" aria-labelledby="lamp-title">
       <figure class="product-detail__figure">
-        <img class="product-detail__image" src="images/lamp.jpg" alt="Синяя настольная лампа с шарнирной стойкой и круглым тёмным основанием" width="640" height="400" fetchpriority="high" decoding="async">
+        <img class="product-detail__image" src="images/lamp.jpg" srcset="images/lamp-400.jpg 400w, images/lamp-800.jpg 800w, images/lamp.jpg 1280w" sizes="(min-width: 1148px) 509px, (min-width: 1024px) calc(50vw - 65px), (min-width: 768px) calc(100vw - 98px), calc(100vw - 66px)" alt="Синяя настольная лампа с шарнирной стойкой и круглым тёмным основанием" width="640" height="400" fetchpriority="high" decoding="async">
         <figcaption class="product-detail__caption">Сгенерированное изображение учебного товара</figcaption>
       </figure>
       <div class="product-detail__content">
         <p class="product-detail__category">Освещение</p>
         <h2 class="product-detail__title" id="lamp-title">Лампа «Линия»</h2>
         <p>Направленный свет для чтения и занятий за рабочим столом.</p>
+        <div class="table-wrapper" role="region" aria-labelledby="lamp-specs" tabindex="0">
         <table class="product-table">
-          <caption class="product-table__caption">Характеристики: Лампа «Линия»</caption>
-          <thead class="product-table__head"><tr><th class="product-table__cell" scope="col">Параметр</th><th class="product-table__cell" scope="col">Значение</th></tr></thead>
-          <tbody>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Категория</th><td class="product-table__cell">Освещение</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Материал</th><td class="product-table__cell">Металл и пластик</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Питание</th><td class="product-table__cell">USB, 5 В</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Источник света</th><td class="product-table__cell">LED, 5 Вт</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Высота</th><td class="product-table__cell">38 см</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Цена</th><td class="product-table__cell">1000 руб.</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Наличие</th><td class="product-table__cell">Демонстрационный товар</td></tr>
-          </tbody>
-        </table>
+            <caption class="product-table__caption" id="lamp-specs">Характеристики: Лампа «Линия»</caption>
+            <thead class="product-table__head"><tr><th class="product-table__cell" scope="col">Параметр</th><th class="product-table__cell" scope="col">Значение</th></tr></thead>
+            <tbody>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Категория</th><td class="product-table__cell">Освещение</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Материал</th><td class="product-table__cell">Металл и пластик</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Питание</th><td class="product-table__cell">USB, 5 В</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Источник света</th><td class="product-table__cell">LED, 5 Вт</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Высота</th><td class="product-table__cell">38 см</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Цена</th><td class="product-table__cell">1000 руб.</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Наличие</th><td class="product-table__cell">Демонстрационный товар</td></tr>
+            </tbody>
+          </table>
+        </div>
         <p class="product-detail__price">1000 руб.</p>
         <a class="button button--primary" href="order.html?product=lamp">Оставить заявку на товар</a>
       </div>
@@ -80,26 +81,28 @@
 
     <article class="product-detail" id="organizer" aria-labelledby="organizer-title">
       <figure class="product-detail__figure">
-        <img class="product-detail__image" src="images/organizer.jpg" alt="Деревянный органайзер с двумя отделениями для карандашей, ручек и бумаги" width="640" height="400" loading="lazy" decoding="async">
+        <img class="product-detail__image" src="images/organizer.jpg" srcset="images/organizer-400.jpg 400w, images/organizer-800.jpg 800w, images/organizer.jpg 1280w" sizes="(min-width: 1148px) 509px, (min-width: 1024px) calc(50vw - 65px), (min-width: 768px) calc(100vw - 98px), calc(100vw - 66px)" alt="Деревянный органайзер с двумя отделениями для карандашей, ручек и бумаги" width="640" height="400" loading="lazy" decoding="async">
         <figcaption class="product-detail__caption">Сгенерированное изображение учебного товара</figcaption>
       </figure>
       <div class="product-detail__content">
         <p class="product-detail__category">Хранение</p>
         <h2 class="product-detail__title" id="organizer-title">Органайзер «Порядок»</h2>
         <p>Два отделения для ручек, заметок и небольших принадлежностей.</p>
+        <div class="table-wrapper" role="region" aria-labelledby="organizer-specs" tabindex="0">
         <table class="product-table">
-          <caption class="product-table__caption">Характеристики: Органайзер «Порядок»</caption>
-          <thead class="product-table__head"><tr><th class="product-table__cell" scope="col">Параметр</th><th class="product-table__cell" scope="col">Значение</th></tr></thead>
-          <tbody>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Категория</th><td class="product-table__cell">Хранение</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Материал</th><td class="product-table__cell">Дерево</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Отделения</th><td class="product-table__cell">2</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Размеры</th><td class="product-table__cell">24 × 12 × 10 см</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Уход</th><td class="product-table__cell">Сухая мягкая ткань</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Цена</th><td class="product-table__cell">1500 руб.</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Наличие</th><td class="product-table__cell">Демонстрационный товар</td></tr>
-          </tbody>
-        </table>
+            <caption class="product-table__caption" id="organizer-specs">Характеристики: Органайзер «Порядок»</caption>
+            <thead class="product-table__head"><tr><th class="product-table__cell" scope="col">Параметр</th><th class="product-table__cell" scope="col">Значение</th></tr></thead>
+            <tbody>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Категория</th><td class="product-table__cell">Хранение</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Материал</th><td class="product-table__cell">Дерево</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Отделения</th><td class="product-table__cell">2</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Размеры</th><td class="product-table__cell">24 × 12 × 10 см</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Уход</th><td class="product-table__cell">Сухая мягкая ткань</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Цена</th><td class="product-table__cell">1500 руб.</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Наличие</th><td class="product-table__cell">Демонстрационный товар</td></tr>
+            </tbody>
+          </table>
+        </div>
         <p class="product-detail__price">1500 руб.</p>
         <a class="button button--primary" href="order.html?product=organizer">Оставить заявку на товар</a>
       </div>
@@ -107,50 +110,54 @@
 
     <article class="product-detail" id="stand" aria-labelledby="stand-title">
       <figure class="product-detail__figure">
-        <img class="product-detail__image" src="images/stand.jpg" alt="Серебристая алюминиевая подставка для ноутбука с нескользящими накладками" width="640" height="400" loading="lazy" decoding="async">
+        <img class="product-detail__image" src="images/stand.jpg" srcset="images/stand-400.jpg 400w, images/stand-800.jpg 800w, images/stand.jpg 1280w" sizes="(min-width: 1148px) 509px, (min-width: 1024px) calc(50vw - 65px), (min-width: 768px) calc(100vw - 98px), calc(100vw - 66px)" alt="Серебристая алюминиевая подставка для ноутбука с нескользящими накладками" width="640" height="400" loading="lazy" decoding="async">
         <figcaption class="product-detail__caption">Сгенерированное изображение учебного товара</figcaption>
       </figure>
       <div class="product-detail__content">
         <p class="product-detail__category">Аксессуары</p>
         <h2 class="product-detail__title" id="stand-title">Подставка «Опора»</h2>
         <p>Приподнимает ноутбук и освобождает место на столе.</p>
+        <div class="table-wrapper" role="region" aria-labelledby="stand-specs" tabindex="0">
         <table class="product-table">
-          <caption class="product-table__caption">Характеристики: Подставка «Опора»</caption>
-          <thead class="product-table__head"><tr><th class="product-table__cell" scope="col">Параметр</th><th class="product-table__cell" scope="col">Значение</th></tr></thead>
-          <tbody>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Категория</th><td class="product-table__cell">Аксессуары</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Материал</th><td class="product-table__cell">Алюминий</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Для ноутбуков</th><td class="product-table__cell">До 15,6 дюйма</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Высота подъёма</th><td class="product-table__cell">12 см</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Основание</th><td class="product-table__cell">Нескользящие накладки</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Цена</th><td class="product-table__cell">2000 руб.</td></tr>
-                <tr><th class="product-table__cell product-table__cell--label" scope="row">Наличие</th><td class="product-table__cell">Демонстрационный товар</td></tr>
-          </tbody>
-        </table>
+            <caption class="product-table__caption" id="stand-specs">Характеристики: Подставка «Опора»</caption>
+            <thead class="product-table__head"><tr><th class="product-table__cell" scope="col">Параметр</th><th class="product-table__cell" scope="col">Значение</th></tr></thead>
+            <tbody>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Категория</th><td class="product-table__cell">Аксессуары</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Материал</th><td class="product-table__cell">Алюминий</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Для ноутбуков</th><td class="product-table__cell">До 15,6 дюйма</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Высота подъёма</th><td class="product-table__cell">12 см</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Основание</th><td class="product-table__cell">Нескользящие накладки</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Цена</th><td class="product-table__cell">2000 руб.</td></tr>
+                  <tr><th class="product-table__cell product-table__cell--label" scope="row">Наличие</th><td class="product-table__cell">Демонстрационный товар</td></tr>
+            </tbody>
+          </table>
+        </div>
         <p class="product-detail__price">2000 руб.</p>
         <a class="button button--primary" href="order.html?product=stand">Оставить заявку на товар</a>
       </div>
     </article>
     <article class="product-detail" id="mat" aria-labelledby="mat-title">
       <figure class="product-detail__figure">
-        <img class="product-detail__image" src="images/mat.jpg" alt="Синий войлочный коврик с закруглёнными углами и тёмной нескользящей основой" width="640" height="400" loading="lazy" decoding="async">
+        <img class="product-detail__image" src="images/mat.jpg" srcset="images/mat-400.jpg 400w, images/mat-800.jpg 800w, images/mat.jpg 1280w" sizes="(min-width: 1148px) 509px, (min-width: 1024px) calc(50vw - 65px), (min-width: 768px) calc(100vw - 98px), calc(100vw - 66px)" alt="Синий войлочный коврик с закруглёнными углами и тёмной нескользящей основой" width="640" height="400" loading="lazy" decoding="async">
         <figcaption class="product-detail__caption">Сгенерированное изображение учебного товара</figcaption>
       </figure>
       <div class="product-detail__content">
         <p class="product-detail__category">Аксессуары</p>
         <h2 class="product-detail__title" id="mat-title">Коврик «Контур»</h2>
         <p>Защищает поверхность стола и объединяет место для клавиатуры и мыши.</p>
+        <div class="table-wrapper" role="region" aria-labelledby="mat-specs" tabindex="0">
         <table class="product-table">
-          <caption class="product-table__caption">Характеристики: Коврик «Контур»</caption>
-          <thead class="product-table__head"><tr><th class="product-table__cell" scope="col">Параметр</th><th class="product-table__cell" scope="col">Значение</th></tr></thead>
-          <tbody>
-            <tr><th class="product-table__cell product-table__cell--label" scope="row">Категория</th><td class="product-table__cell">Аксессуары</td></tr>
-            <tr><th class="product-table__cell product-table__cell--label" scope="row">Материал</th><td class="product-table__cell">Войлок с нескользящей основой</td></tr>
-            <tr><th class="product-table__cell product-table__cell--label" scope="row">Размеры</th><td class="product-table__cell">80 × 40 см</td></tr>
-            <tr><th class="product-table__cell product-table__cell--label" scope="row">Уход</th><td class="product-table__cell">Сухая мягкая щётка</td></tr>
-            <tr><th class="product-table__cell product-table__cell--label" scope="row">Цена</th><td class="product-table__cell">900 руб.</td></tr>
-          </tbody>
-        </table>
+            <caption class="product-table__caption" id="mat-specs">Характеристики: Коврик «Контур»</caption>
+            <thead class="product-table__head"><tr><th class="product-table__cell" scope="col">Параметр</th><th class="product-table__cell" scope="col">Значение</th></tr></thead>
+            <tbody>
+              <tr><th class="product-table__cell product-table__cell--label" scope="row">Категория</th><td class="product-table__cell">Аксессуары</td></tr>
+              <tr><th class="product-table__cell product-table__cell--label" scope="row">Материал</th><td class="product-table__cell">Войлок с нескользящей основой</td></tr>
+              <tr><th class="product-table__cell product-table__cell--label" scope="row">Размеры</th><td class="product-table__cell">80 × 40 см</td></tr>
+              <tr><th class="product-table__cell product-table__cell--label" scope="row">Уход</th><td class="product-table__cell">Сухая мягкая щётка</td></tr>
+              <tr><th class="product-table__cell product-table__cell--label" scope="row">Цена</th><td class="product-table__cell">900 руб.</td></tr>
+            </tbody>
+          </table>
+        </div>
         <p class="product-detail__price">900 руб.</p>
         <a class="button button--primary" href="order.html?product=mat">Оставить заявку на товар</a>
       </div>
@@ -166,9 +173,9 @@
       <p>&copy; 2026 Учебный проект. Все права защищены.</p>
       <p>Дисциплина: Фронтенд и бэкенд разработка</p>
       <p><a href="contacts.html">Контактная информация</a></p>
+      <a class="back-to-top" href="#top">Наверх</a>
     </div>
   </footer>
-  <a class="back-to-top" href="#top" aria-label="Наверх страницы">↑ Наверх</a>
 
 </body>
 </html>
