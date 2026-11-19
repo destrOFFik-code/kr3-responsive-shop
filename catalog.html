@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Четыре товара и две услуги для рабочего места: цены, категории и подробные описания.">
+  <title>Каталог товаров и услуг — ShopProject</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="ShopProject">
+  <meta property="og:title" content="Каталог товаров и услуг — ShopProject">
+  <meta property="og:description" content="Четыре товара и две услуги для рабочего места: цены, категории и подробные описания.">
+  <meta property="og:url" content="https://destroffik-code.github.io/kr1-html-css-shop/catalog.html">
+  <meta property="og:image" content="https://destroffik-code.github.io/kr1-html-css-shop/images/preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ShopProject — учебный интернет-магазин">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page" id="top">
+  <a class="skip-link" href="#main-content">К содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товары</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="services.html">Услуги</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#faq">Вопросы</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page__main" id="main-content" tabindex="-1">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current" aria-current="page">Каталог</span>
+    </nav>
+    <section class="section">
+      <h1 class="section__heading">Каталог товаров и услуг</h1>
+      <p>Шесть позиций: четыре товара и две услуги для организации рабочего места.
+        Откройте описание или перейдите к заявке на выбранную позицию.</p>
+    </section>
+    <div class="catalog-layout">
+      <aside class="catalog-filters" aria-labelledby="filters-title">
+        <h2 class="catalog-filters__title" id="filters-title">Фильтры</h2>
+        <p id="filters-note" class="catalog-filters__note">
+          Учебный макет фильтров. Фильтрация товаров пока недоступна.
+        </p>
+        <form class="catalog-filters__form" action="catalog.html" method="get" aria-describedby="filters-note">
+          <fieldset class="catalog-filters__group">
+            <legend class="catalog-filters__legend">Категория</legend>
+            <label class="catalog-filters__label">
+              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="lighting">
+              Освещение
+            </label>
+            <label class="catalog-filters__label">
+              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="storage">
+              Хранение
+            </label>
+            <label class="catalog-filters__label">
+              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="accessories">
+              Аксессуары
+            </label>
+            <label class="catalog-filters__label">
+              <input class="catalog-filters__checkbox" type="checkbox" name="category" value="services">
+              Услуги
+            </label>
+          </fieldset>
+
+          <fieldset class="catalog-filters__group">
+            <legend class="catalog-filters__legend">Цена, руб.</legend>
+            <label class="catalog-filters__label" for="price-from">От</label>
+            <input class="catalog-filters__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
+            <label class="catalog-filters__label catalog-filters__label--range-end" for="price-to">До</label>
+            <input class="catalog-filters__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+          </fieldset>
+
+          <button class="button button--primary catalog-filters__button" type="submit" disabled>Применить</button>
+        </form>
+      </aside>
+      <section class="catalog-products" aria-labelledby="products-title">
+        <h2 class="catalog-products__title" id="products-title">Товары и услуги — 6 позиций</h2>
+        <div class="products-grid">
+        <article class="product-card product-card--featured">
+          <span class="product-card__badge">Хит</span>
+          <a class="product-card__image-link" href="product.html#lamp" aria-label="Подробнее: Лампа «Линия»">
+            <img class="product-card__image" src="images/lamp.jpg" alt="Синяя настольная лампа с шарнирной стойкой и круглым тёмным основанием" width="640" height="400" loading="lazy" decoding="async">
+          </a>
+          <p class="product-card__category">Освещение</p>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#lamp">Лампа «Линия»</a></h3>
+          <p class="product-card__description">Направленный свет для чтения и занятий за рабочим столом.</p>
+          <p class="product-card__price">Цена: 1000 руб.</p>
+          <a class="button button--primary product-card__button" href="order.html?product=lamp">Оставить заявку</a>
+        </article>
+
+        <article class="product-card">
+          <a class="product-card__image-link" href="product.html#organizer" aria-label="Подробнее: Органайзер «Порядок»">
+            <img class="product-card__image" src="images/organizer.jpg" alt="Деревянный органайзер с двумя отделениями для карандашей, ручек и бумаги" width="640" height="400" loading="lazy" decoding="async">
+          </a>
+          <p class="product-card__category">Хранение</p>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#organizer">Органайзер «Порядок»</a></h3>
+          <p class="product-card__description">Два отделения для ручек, заметок и небольших принадлежностей.</p>
+          <p class="product-card__price">Цена: 1500 руб.</p>
+          <a class="button button--primary product-card__button" href="order.html?product=organizer">Оставить заявку</a>
+        </article>
+
+        <article class="product-card">
+
+          <a class="product-card__image-link" href="product.html#stand" aria-label="Подробнее: Подставка «Опора»">
+            <img class="product-card__image" src="images/stand.jpg" alt="Серебристая алюминиевая подставка для ноутбука с нескользящими накладками" width="640" height="400" loading="lazy" decoding="async">
+          </a>
+          <p class="product-card__category">Аксессуары</p>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#stand">Подставка «Опора»</a></h3>
+          <p class="product-card__description">Приподнимает ноутбук и освобождает место на столе.</p>
+          <p class="product-card__price">Цена: 2000 руб.</p>
+          <a class="button button--primary product-card__button" href="order.html?product=stand">Оставить заявку</a>
+        </article>
+
+        <article class="product-card">
+          <a class="product-card__image-link" href="product.html#mat" aria-label="Подробнее: Коврик «Контур»">
+            <img class="product-card__image" src="images/mat.jpg" alt="Синий войлочный коврик с закруглёнными углами и тёмной нескользящей основой" width="640" height="400" loading="lazy" decoding="async">
+          </a>
+          <p class="product-card__category">Аксессуары</p>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#mat">Коврик «Контур»</a></h3>
+          <p class="product-card__description">Защищает поверхность стола и объединяет место для клавиатуры и мыши.</p>
+          <p class="product-card__price">Цена: 900 руб.</p>
+          <a class="button button--primary product-card__button" href="order.html?product=mat">Оставить заявку</a>
+        </article>
+        <article class="product-card">
+          <a class="product-card__image-link" href="services.html#selection" aria-label="Подробнее: Подбор рабочего места">
+            <img class="product-card__image" src="images/selection.svg" alt="План рабочего места с лампой и списком подобранных принадлежностей" width="640" height="400" loading="lazy" decoding="async">
+          </a>
+          <p class="product-card__category">Услуги</p>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="services.html#selection">Подбор рабочего места</a></h3>
+          <p class="product-card__description">Помощь с выбором освещения и аксессуаров под размер стола и задачи.</p>
+          <p class="product-card__price">Цена: 700 руб.</p>
+          <a class="button button--primary product-card__button" href="order.html?product=selection">Оставить заявку</a>
+        </article>
+        <article class="product-card">
+          <a class="product-card__image-link" href="services.html#setup" aria-label="Подробнее: Организация стола">
+            <img class="product-card__image" src="images/setup.svg" alt="Рабочий стол с ноутбуком, лампой и аккуратно уложенными проводами" width="640" height="400" loading="lazy" decoding="async">
+          </a>
+          <p class="product-card__category">Услуги</p>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="services.html#setup">Организация стола</a></h3>
+          <p class="product-card__description">План размещения вещей, хранения принадлежностей и укладки проводов.</p>
+          <p class="product-card__price">Цена: 1200 руб.</p>
+          <a class="button button--primary product-card__button" href="order.html?product=setup">Оставить заявку</a>
+        </article>
+        </div>
+      </section>
+    </div>
+    <aside class="aside-info">
+      <h2 class="aside-info__title">Нужна помощь с выбором?</h2>
+      <p><a href="order.html">Оставьте общий вопрос</a> или посмотрите
+        <a href="index.html#reviews">примеры отзывов</a>. Условия описаны на странице <a href="delivery.html">доставки и заявки</a>.</p>
+    </aside>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+      <p><a href="contacts.html">Контактная информация</a></p>
+    </div>
+  </footer>
+  <a class="back-to-top" href="#top" aria-label="Наверх страницы">↑ Наверх</a>
+
+</body>
+</html>

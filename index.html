@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ShopProject: товары и услуги для рабочего места. Каталог, характеристики, отзывы и учебная форма заявки.">
+  <title>Товары для рабочего места — ShopProject</title>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="ShopProject">
+  <meta property="og:title" content="Товары для рабочего места — ShopProject">
+  <meta property="og:description" content="ShopProject: товары и услуги для рабочего места. Каталог, характеристики, отзывы и учебная форма заявки.">
+  <meta property="og:url" content="https://destroffik-code.github.io/kr1-html-css-shop/">
+  <meta property="og:image" content="https://destroffik-code.github.io/kr1-html-css-shop/images/preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ShopProject — учебный интернет-магазин">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body class="page" id="top">
+  <a class="skip-link" href="#main-content">К содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">ShopProject</a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товары</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="services.html">Услуги</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#faq">Вопросы</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page__main" id="main-content" tabindex="-1">
+    <section class="hero">
+      <p class="hero__eyebrow">Учебный магазин · КР №1</p>
+      <h1 class="hero__title">Всё для удобного рабочего места</h1>
+      <p class="hero__description">Свет, порядок и удобство для занятий. Посмотрите товары,
+        сравните характеристики и оставьте заявку на выбранную вещь.</p>
+      <a class="button button--primary" href="catalog.html">Открыть каталог</a>
+      <a class="hero__link" href="order.html">Перейти к заявке</a>
+      <a class="hero__link" href="#advantages">Преимущества</a>
+      <a class="hero__link" href="#popular">Популярные товары</a>
+    </section>
+
+    <section class="section" id="advantages">
+      <h2 class="section__title">Помогаем выбрать по делу</h2>
+      <ul class="advantages-list">
+        <li class="advantages-list__item">Изображение, описание и цена у каждой позиции.</li>
+        <li class="advantages-list__item">Таблицы характеристик для сравнения перед заявкой.</li>
+        <li class="advantages-list__item">Переход к заявке с уже выбранным товаром.</li>
+        <li class="advantages-list__item">Форма с подсказками и проверкой обязательных полей.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="popular">
+      <h2 class="section__title">Популярные товары</h2>
+      <div class="products-grid">
+        <article class="product-card product-card--featured">
+          <span class="product-card__badge">Хит</span>
+          <a class="product-card__image-link" href="product.html#lamp" aria-label="Подробнее: Лампа «Линия»">
+            <img class="product-card__image" src="images/lamp.jpg" alt="Синяя настольная лампа с шарнирной стойкой и круглым тёмным основанием" width="640" height="400" loading="lazy" decoding="async">
+          </a>
+          <p class="product-card__category">Освещение</p>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#lamp">Лампа «Линия»</a></h3>
+          <p class="product-card__description">Направленный свет для чтения и занятий за рабочим столом.</p>
+          <p class="product-card__price">Цена: 1000 руб.</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Лампа «Линия»">Заказать</button>
+        </article>
+
+        <article class="product-card">
+          <a class="product-card__image-link" href="product.html#organizer" aria-label="Подробнее: Органайзер «Порядок»">
+            <img class="product-card__image" src="images/organizer.jpg" alt="Деревянный органайзер с двумя отделениями для карандашей, ручек и бумаги" width="640" height="400" loading="lazy" decoding="async">
+          </a>
+          <p class="product-card__category">Хранение</p>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#organizer">Органайзер «Порядок»</a></h3>
+          <p class="product-card__description">Два отделения для ручек, заметок и небольших принадлежностей.</p>
+          <p class="product-card__price">Цена: 1500 руб.</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Органайзер «Порядок»">Заказать</button>
+        </article>
+
+        <article class="product-card">
+
+          <a class="product-card__image-link" href="product.html#stand" aria-label="Подробнее: Подставка «Опора»">
+            <img class="product-card__image" src="images/stand.jpg" alt="Серебристая алюминиевая подставка для ноутбука с нескользящими накладками" width="640" height="400" loading="lazy" decoding="async">
+          </a>
+          <p class="product-card__category">Аксессуары</p>
+          <h3 class="product-card__title"><a class="product-card__title-link" href="product.html#stand">Подставка «Опора»</a></h3>
+          <p class="product-card__description">Приподнимает ноутбук и освобождает место на столе.</p>
+          <p class="product-card__price">Цена: 2000 руб.</p>
+          <button class="button button--primary product-card__button" type="button" data-product="Подставка «Опора»">Заказать</button>
+        </article>
+      </div>
+      <p><a href="product.html">Посмотреть подробные характеристики товаров</a></p>
+    </section>
+
+    <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <h2 class="section__title" id="reviews-title">Отзывы о товарах</h2>
+      <p class="section__description">Примеры отзывов для демонстрации интерфейса учебного магазина.</p>
+      <div class="reviews-grid">
+        <article class="review-card">
+          <h3 class="review-card__title">Лампа «Линия»</h3>
+          <p class="review-card__rating" aria-label="Оценка 5 из 5">★★★★★</p>
+          <blockquote class="review-card__quote">Можно направить свет на тетрадь, не освещая весь стол. Для вечернего чтения удобно.</blockquote>
+          <p class="review-card__author">Алина · учебный пример</p>
+          <a class="review-card__link" href="product.html#lamp">О лампе</a>
+        </article>
+        <article class="review-card">
+          <h3 class="review-card__title">Органайзер «Порядок»</h3>
+          <p class="review-card__rating" aria-label="Оценка 4 из 5">★★★★☆</p>
+          <blockquote class="review-card__quote">Ручки и заметки лежат отдельно. Для больших блокнотов места мало, для мелочей хватает.</blockquote>
+          <p class="review-card__author">Михаил · учебный пример</p>
+          <a class="review-card__link" href="product.html#organizer">Об органайзере</a>
+        </article>
+        <article class="review-card">
+          <h3 class="review-card__title">Подставка «Опора»</h3>
+          <p class="review-card__rating" aria-label="Оценка 5 из 5">★★★★★</p>
+          <blockquote class="review-card__quote">Экран стал выше, под ноутбуком появилось место. Использую с отдельной клавиатурой.</blockquote>
+          <p class="review-card__author">София · учебный пример</p>
+          <a class="review-card__link" href="product.html#stand">О подставке</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 class="section__title" id="faq-title">Часто задаваемые вопросы</h2>
+      <div class="faq">
+        <details class="faq__item">
+          <summary class="faq__question">Что можно выбрать в каталоге?</summary>
+          <p class="faq__answer">В каталоге представлены четыре товара для рабочего стола: лампа «Линия», органайзер «Порядок», подставка для ноутбука «Опора» и коврик «Контур». Лампа помогает направить свет на рабочую поверхность, органайзер — разложить принадлежности, подставка — приподнять ноутбук, а коврик — защитить стол и выделить место для клавиатуры и мыши. У каждой позиции есть изображение, краткое описание и цена.</p>
+          <p class="faq__answer">Также можно выбрать две услуги: подбор рабочего места и организацию стола. Они подойдут, если нужна помощь с выбором принадлежностей или их размещением. Из <a href="catalog.html">каталога</a> можно перейти к подробному описанию любой позиции и оставить заявку. Все товары, услуги и цены представлены в рамках учебного проекта.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Как узнать характеристики товара?</summary>
+          <p class="faq__answer">Нажмите на изображение или название нужного товара в каталоге: ссылка откроет его раздел на <a href="product.html">странице характеристик</a>. Там размещены увеличенная иллюстрация, описание назначения, цена и таблица параметров. В таблицах указаны материалы, размеры и другие сведения, которые помогают оценить, подходит ли вещь для вашего рабочего места.</p>
+          <p class="faq__answer">Перед выбором лампы посмотрите её высоту, питание и источник света; у органайзера — размеры и количество отделений; у подставки — допустимый размер ноутбука; у коврика — габариты и материал. Между товарами можно переходить по ссылкам в начале страницы. Если после сравнения остались вопросы, перейдите к заявке и укажите их в комментарии.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Что входит в услуги?</summary>
+          <p class="faq__answer">Услуга «Подбор рабочего места» включает обсуждение ваших задач и размеров стола, подбор освещения и аксессуаров из каталога, а также рекомендации по их сочетанию. Услуга «Организация стола» посвящена размещению ноутбука и принадлежностей, хранению мелочей и укладке проводов. Её результат описан как схема размещения вещей и памятка по поддержанию порядка.</p>
+          <p class="faq__answer">Обе услуги представлены в формате дистанционной консультации продолжительностью 30 минут. Для обсуждения понадобятся размеры стола и описание того, как вы работаете или учитесь. Демонстрационная стоимость подбора — 700 руб., организации стола — 1200 руб.; покупка товаров и выезд специалиста в неё не входят. Подробности и кнопки заявки находятся на <a href="services.html">странице услуг</a>. Фактически консультации в учебном проекте не проводятся.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Как оставить заявку?</summary>
+          <p class="faq__answer">Выберите товар или услугу и нажмите «Оставить заявку» в каталоге либо на странице описания. Откроется форма с уже выбранной позицией и темой обращения. Если нужен общий вопрос, перейдите на <a href="order.html">страницу заявки</a> через меню и оставьте вариант без выбора позиции. На главной странице также доступна короткая форма в модальном окне.</p>
+          <p class="faq__answer">Укажите имя длиной от двух символов, e-mail и телефон в формате +7 (900) 000-00-00, выберите тему и отметьте согласие. Дату связи и комментарий можно заполнить по желанию: например, описать размеры стола или вопрос о товаре. После нажатия «Отправить заявку» браузер проверит поля и подскажет, что исправить. При успешной проверке форма очистится и появится учебное сообщение; данные на сервер не отправляются.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Есть ли доставка и оплата?</summary>
+          <p class="faq__answer">На странице <a href="delivery.html">«Доставка и заявка»</a> приведён пример условий получения товаров: бесплатный самовывоз в Москве или курьерская доставка по городу за 300 руб. Ориентировочный срок доставки в этом сценарии — 2–3 рабочих дня. Стоимость доставки указывается отдельно и не включена в цену товара в каталоге; адрес и время в реальном магазине согласовывались бы после заявки.</p>
+          <p class="faq__answer">Для услуг предусмотрен пример дистанционной консультации, поэтому доставка для них не требуется. Сайт демонстрирует выбор позиции и заполнение формы: реальные заказы не оформляются, товары не отправляются, оплата не принимается. Вводить платёжные данные или переводить деньги не нужно. Подробнее о получении товаров, формате услуг и последовательности заявки можно прочитать на странице условий.</p>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__question">Куда отправляются данные формы?</summary>
+          <p class="faq__answer">Данные формы обрабатываются только в вашем браузере. При нажатии «Отправить заявку» проверяются обязательные поля, длина имени, формат e-mail и телефона, выбранная тема и отметка согласия. Если обнаружена ошибка, поле выделяется, а браузер показывает подсказку. После исправления данных проверку можно повторить.</p>
+          <p class="faq__answer">При успешной проверке поля очищаются и появляется сообщение о том, что заявка проверена. Форма не отправляет введённые сведения на сервер, не записывает их в базу данных и не пересылает по электронной почте. Поэтому сообщение не означает, что магазин получил заказ или свяжется с вами. Для знакомства с формой можно использовать демонстрационные контактные данные; этот сценарий показывает работу интерфейса учебного проекта.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <h2 class="section__title">Обратная связь</h2>
+      <p>Выберите удобный способ: отдельная страница заявки или короткая форма в окне.</p>
+      <div class="action-list">
+        <a class="button button--primary" href="order.html">Страница заявки</a>
+        <button class="button button--secondary" type="button" data-open-order>Оставить заявку в окне</button>
+        <a href="contacts.html">Контакты магазина</a>
+      </div>
+      <p class="success-message" id="success-message" role="status" tabindex="-1" hidden></p>
+    </section>
+
+    <aside class="aside-info">
+      <h2 class="aside-info__title">Об учебном магазине</h2>
+      <p>ShopProject — проект по дисциплине «Фронтенд и бэкенд разработка».
+        Товары, характеристики и отзывы демонстрационные. Заявки проходят проверку в браузере;
+        данные не отправляются на сервер, оплата не выполняется.</p>
+    </aside>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+      <p><a href="contacts.html">Контактная информация</a></p>
+    </div>
+  </footer>
+  <a class="back-to-top" href="#top" aria-label="Наверх страницы">↑ Наверх</a>
+<dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+  <h2 class="order-dialog__title" id="order-dialog-title" tabindex="-1" autofocus>Оформление заявки</h2>
+
+  <p class="order-dialog__product" id="selected-product-label" hidden></p>
+  <form class="order-form" id="order-form" action="#" method="post" novalidate>
+    <input id="selected-product" name="selected-product" type="hidden">
+
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-name">Имя</label>
+      <input class="order-form__input"
+        id="order-name"
+        name="name"
+        type="text"
+        placeholder="Введите ваше имя"
+        minlength="2"
+        autocomplete="given-name"
+        required
+      >
+    </div>
+
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-email">E-mail</label>
+      <input class="order-form__input"
+        id="order-email"
+        name="email"
+        type="email"
+        placeholder="example@mail.ru"
+        autocomplete="email"
+        required
+      >
+    </div>
+
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-phone">Телефон</label>
+      <input class="order-form__input"
+        id="order-phone"
+        aria-describedby="order-phone-hint"
+        name="phone"
+        autocomplete="tel"
+        type="tel"
+        inputmode="tel"
+        placeholder="+7 (900) 000-00-00"
+        pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+        required
+      >
+      <small class="order-form__hint" id="order-phone-hint">Формат: +7 (900) 000-00-00</small>
+    </div>
+
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-date">Дата связи</label>
+      <input class="order-form__input"
+        id="order-date"
+        name="date"
+        type="date"
+      >
+    </div>
+
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-topic">Тема заявки</label>
+      <select class="order-form__select" id="order-topic" name="topic" required>
+        <option value="">Выберите тему</option>
+        <option value="product">Заказ товара</option>
+        <option value="consultation">Консультация</option>
+        <option value="delivery">Доставка</option>
+      </select>
+    </div>
+
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-comment">Комментарий</label>
+      <textarea class="order-form__textarea"
+        id="order-comment"
+        name="comment"
+        rows="4"
+        placeholder="Укажите дополнительную информацию"
+      ></textarea>
+    </div>
+
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-agreement">
+        <input class="order-form__input order-form__input--checkbox"
+          id="order-agreement"
+          name="agreement"
+          type="checkbox"
+          required
+        >
+        Я согласен на обработку данных
+      </label>
+    </div>
+
+    <div class="order-form__actions">
+      <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+      <button class="button button--primary" type="submit">Отправить заявку</button>
+    </div>
+  </form>
+</dialog>
+</body>
+</html>
