@@ -7,6 +7,7 @@
   --color-primary-dark: #003f86;
   --color-primary-pressed: #002d61;
   --color-border: #dddddd;
+  --color-control-border: #757575;
   --color-surface: #f7f7f7;
   --color-surface-accent: #eef5ff;
   --color-field-muted: #eeeeee;
@@ -58,8 +59,8 @@ a:hover {
   color: var(--color-primary-dark);
 }
 
-a:focus-visible {
-  outline: 2px solid var(--color-primary);
+:focus-visible {
+  outline: 3px solid var(--color-primary);
   outline-offset: 3px;
 }
 
@@ -284,7 +285,7 @@ a:focus-visible {
 .catalog-filters__input {
   width: 100%;
   padding: var(--space-sm) 10px;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-control-border);
   border-radius: var(--radius-sm);
   background-color: var(--color-bg);
   color: var(--color-text);
@@ -379,15 +380,25 @@ a:focus-visible {
 .order-form__textarea {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid var(--order-field-border, var(--color-border));
+  border: 1px solid var(--order-field-border, var(--color-control-border));
   border-radius: var(--radius-sm);
   background-color: var(--order-field-bg, var(--color-white));
   font: inherit;
 }
 
 .order-form__input--checkbox {
-  width: auto;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
   background-color: var(--color-white);
+}
+
+.order-form__consent {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-height: 44px;
+  cursor: pointer;
 }
 
 .order-form__hint {
@@ -409,8 +420,8 @@ a:focus-visible {
 
 .order-form__input:focus-visible,
 .order-form__select:focus-visible,
-.order-form__textarea:focus-visible {
-  outline: 2px solid var(--color-primary);
+.order-form__textare:focus-visible {
+  outline: 3px solid var(--color-primary);
   outline-offset: 3px;
 }
 
@@ -423,6 +434,11 @@ a:focus-visible {
 .order-form__input--checkbox.order-form__input--error {
   outline: 2px solid var(--color-danger);
   outline-offset: 3px;
+}
+
+.order-form__error {
+  margin: var(--space-xs) 0 0;
+  color: var(--color-danger);
 }
 
 .order-form__actions {
@@ -461,6 +477,11 @@ a:focus-visible {
   color: var(--color-white);
   background-color: var(--color-primary-dark);
   transform: translateY(-200%);
+}
+
+.skip-link:hover,
+.skip-link:focus-visible {
+  color: var(--color-white);
 }
 
 .skip-link:focus-visible {
