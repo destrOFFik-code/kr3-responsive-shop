@@ -1,3 +1,31 @@
+const navigationToggle = document.querySelector('.site-nav-toggle');
+const navigation = document.getElementById('site-nav');
+const wideNavigation = window.matchMedia('(min-width: 768px)');
+
+navigationToggle.hidden = false;
+navigationToggle.addEventListener('click', () => {
+  const expanded = navigationToggle.getAttribute('aria-expanded') === 'true';
+  navigationToggle.setAttribute('aria-expanded', String(!expanded));
+});
+
+navigationToggle.closest('.site-header').addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && !wideNavigation.matches && navigationToggle.getAttribute('aria-expanded') === 'true') {
+    navigationToggle.setAttribute('aria-expanded', 'false');
+    navigationToggle.focus();
+  }
+});
+
+wideNavigation.addEventListener('change', (event) => {
+  if (!event.matches && navigation.contains(document.activeElement)) {
+    navigationToggle.setAttribute('aria-expanded', 'true');
+  }
+});
+
+const filterDetails = document.querySelector('.catalog-filters__details');
+if (filterDetails) {
+  filterDetails.open = window.matchMedia('(min-width: 1024px)').matches;
+}
+
 // Минимальная логика учебных форм: данные не отправляются на сервер.
 const orderDialog = document.getElementById('order-dialog');
 const orderForm = document.getElementById('order-form');
