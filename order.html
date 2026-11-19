@@ -10,12 +10,11 @@
   <meta property="og:site_name" content="ShopProject">
   <meta property="og:title" content="Оформление заявки — ShopProject">
   <meta property="og:description" content="Учебная форма заявки ShopProject: выбранный товар или услуга, контактные данные, тема обращения и комментарий.">
-  <meta property="og:url" content="https://destroffik-code.github.io/kr1-html-css-shop/order.html">
-  <meta property="og:image" content="https://destroffik-code.github.io/kr1-html-css-shop/images/preview.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="ShopProject — учебный интернет-магазин">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <script src="js/main.js" defer></script>
 </head>
 <body class="page" id="top">
@@ -49,7 +48,7 @@
       <p class="success-message" id="success-message" role="status" tabindex="-1" hidden></p>
       <div class="order-layout">
   <form class="order-form order-form--page" id="order-form" action="#" method="post" aria-describedby="order-note" novalidate>
-    <div class="order-form__field">
+    <div class="order-form__field order-form__field--wide">
       <label class="order-form__label" for="selected-product">Товар или услуга</label>
       <select class="order-form__select" id="selected-product" name="selected-product">
         <option value="">Общий вопрос без выбора позиции</option>
@@ -122,7 +121,7 @@
       </select>
     </div>
 
-    <div class="order-form__field">
+    <div class="order-form__field order-form__field--wide">
       <label class="order-form__label" for="order-comment">Комментарий</label>
       <textarea class="order-form__textarea"
         id="order-comment"
@@ -132,7 +131,7 @@
       ></textarea>
     </div>
 
-    <div class="order-form__field">
+    <div class="order-form__field order-form__field--wide">
       <label class="order-form__label" for="order-agreement">
         <input class="order-form__input order-form__input--checkbox"
           id="order-agreement"
@@ -167,9 +166,9 @@
       <p>&copy; 2026 Учебный проект. Все права защищены.</p>
       <p>Дисциплина: Фронтенд и бэкенд разработка</p>
       <p><a href="contacts.html">Контактная информация</a></p>
+      <a class="back-to-top" href="#top">Наверх</a>
     </div>
   </footer>
-  <a class="back-to-top" href="#top" aria-label="Наверх страницы">↑ Наверх</a>
 
 </body>
 </html>
