@@ -4,7 +4,20 @@ const orderForm = document.getElementById('order-form');
 const successMessage = document.getElementById('success-message');
 const selectedProductInput = document.getElementById('selected-product');
 
-// ARIA сообщает об ошибке средствам доступности, модификатор задаёт её вид.
+function getValidationMessage(field) {
+  const { validity } = field;
+
+  if (validity.valueMissing) {
+    if (field.type === 'checkbox') return 'Подтвердите согласие, чтобы продолжить.';
+    if (field.tagName === 'SELECT') return 'Выберите тему заявки.';
+    return 'Заполните это поле.';
+  }
+  if (validity.typeMismatch) return 'Укажите адрес электронной почты в формате name@example.ru.';
+  if (validity.patternMismatch) return 'Введите телефон в формате +7 (900) 123-45-67.';
+  if (validity.tooShort) return `Введите хотя бы ${field.minLength} символа.`;
+  return field.validationMessage;
+}
+
 function setFieldInvalid(field, invalid) {
   const fieldClass = {
     INPUT: 'order-form__input',
@@ -16,10 +29,30 @@ function setFieldInvalid(field, invalid) {
     field.classList.toggle(`${fieldClass}--error`, invalid);
   }
 
+  const errorId = `${field.id}-error`;
+  const descriptions = (field.getAttribute('aria-describedby') || '').split(/\s+/)
+    .filter((id) => id && id !== errorId);
+  let error = document.getElementById(errorId);
+
   if (invalid) {
+    if (!error) {
+      error = document.createElement('p');
+      error.className = 'order-form__error';
+      error.id = errorId;
+      field.closest('.order-form__field').append(error);
+    }
+    error.textContent = getValidationMessage(field);
     field.setAttribute('aria-invalid', 'true');
+    descriptions.push(errorId);
   } else {
+    error?.remove();
     field.removeAttribute('aria-invalid');
+  }
+
+  if (descriptions.length) {
+    field.setAttribute('aria-describedby', descriptions.join(' '));
+  } else {
+    field.removeAttribute('aria-describedby');
   }
 }
 
@@ -31,12 +64,22 @@ function clearErrors() {
 
 // Модальное окно есть только на главной. Страница заявки работает независимо.
 if (orderDialog) {
-  const title = document.getElementById('order-dialog-title');
   const productLabel = document.getElementById('selected-product-label');
 
-  orderDialog.addEventListener('click', (event) => {
-    if (!event.target.closest('input, select, textarea, label, button')) {
-      title.focus({ preventScroll: true });
+  orderDialog.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab') return;
+
+    const controls = Array.from(orderForm.elements)
+      .filter((field) => !field.disabled && field.type !== 'hidden' && field.tabIndex >= 0);
+    const first = controls[0];
+    const last = controls.at(-1);
+
+    if (event.shiftKey && (document.activeElement === first || !controls.includes(document.activeElement))) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
     }
   });
 
@@ -69,8 +112,8 @@ if (selectedProductInput instanceof HTMLSelectElement) {
 if (orderForm) {
   orderForm.addEventListener('input', (event) => {
     const field = event.target;
-    if (field.willValidate && field.validity.valid) {
-      setFieldInvalid(field, false);
+    if (field.hasAttribute('aria-invalid')) {
+      setFieldInvalid(field, !field.validity.valid);
     }
     successMessage.hidden = true;
   });
@@ -84,13 +127,11 @@ if (orderForm) {
     event.preventDefault();
     clearErrors();
 
-    if (!orderForm.checkValidity()) {
-      Array.from(orderForm.elements).forEach((field) => {
-        if (field.willValidate) {
-          setFieldInvalid(field, !field.validity.valid);
-        }
-      });
-      orderForm.reportValidity();
+    const invalidFields = Array.from(orderForm.elements)
+      .filter((field) => field.willValidate && !field.validity.valid);
+    if (invalidFields.length) {
+      invalidFields.forEach((field) => setFieldInvalid(field, true));
+      invalidFields[0].focus();
       return;
     }
 
@@ -100,8 +141,7 @@ if (orderForm) {
     successMessage.hidden = false;
     if (orderDialog) {
       orderDialog.close();
-    } else {
-      successMessage.focus();
     }
+    successMessage.focus();
   });
 }
