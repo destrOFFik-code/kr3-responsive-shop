@@ -173,3 +173,48 @@ if (orderForm) {
     successMessage.focus();
   });
 }
+
+const priceFormatter = new Intl.NumberFormat('ru-RU', {
+  style: 'currency',
+  currency: 'RUB',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 2,
+});
+
+function formatPrice(price) {
+  return priceFormatter.format(price);
+}
+
+function calculateDiscount(price, discountPercent) {
+  const validPercent = Number.isFinite(discountPercent) && discountPercent >= 0 && discountPercent <= 100;
+  return validPercent ? Math.round(price * discountPercent) / 100 : 0;
+}
+
+function calculateFinalPrice(price, discountPercent) {
+  const discount = calculateDiscount(price, discountPercent);
+  return Math.round((price - discount) * 100) / 100;
+}
+
+function getProductStatus(item) {
+  return item.isAvailable ? 'В наличии' : 'Нет в наличии';
+}
+
+function createProductSummary(item) {
+  const finalPrice = calculateFinalPrice(item.price, item.discountPercent);
+  return `${item.title} — ${formatPrice(finalPrice)}. ${getProductStatus(item)}.`;
+}
+
+const exerciseOutput = document.querySelector('.product-output');
+
+if (exerciseOutput) {
+  const summary = createProductSummary(product);
+  console.table(product);
+  console.log('Исходная цена:', formatPrice(product.price));
+  console.log('Размер скидки:', formatPrice(calculateDiscount(product.price, product.discountPercent)));
+  console.log('Цена со скидкой:', formatPrice(calculateFinalPrice(product.price, product.discountPercent)));
+  console.log('Статус:', getProductStatus(product));
+  console.log(summary);
+
+  document.querySelector('.js-message').textContent = 'JavaScript подключён.';
+  exerciseOutput.textContent = summary;
+}
